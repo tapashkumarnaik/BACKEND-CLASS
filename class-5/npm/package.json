@@ -9,7 +9,7 @@
     "fire": "nodemon index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Tapash",
   "license": "ISC",
   "dependencies": {
     "is-odd": "^3.0.1",
