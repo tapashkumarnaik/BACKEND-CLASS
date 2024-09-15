@@ -3,6 +3,8 @@
 // and "This is about page" in about page. If any other page is requested, "page not found"
 // switch statement
 
+
+// Import modules:
 const http = require("http");
 
 // Create server

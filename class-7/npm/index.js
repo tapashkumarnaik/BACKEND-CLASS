@@ -15,6 +15,18 @@ const server = http.createServer((req, res) => {
     console.log(data);
     res.writeHead(200, { "Content-Type": "application/json" });
     res.end(data);
+  } else if (req.url === "/write") {
+    const data = readFile();
+    const newData = {
+      id: 3,
+      name: "Shaktiman",
+      age: 70,
+    };
+    data.students.push(JSON.stringify(newData));
+    fs.writeFileSync("data.json", JSON.parse(data));
+    console.log(data);
+
+    res.end("Data sent");
   }
 });
 const port = process.env.PORT;

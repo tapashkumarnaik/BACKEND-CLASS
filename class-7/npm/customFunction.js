@@ -7,4 +7,14 @@ const readFile = () => {
   return parseData;
 };
 
-module.exports = { readFile };
+const writeFile = () => {
+  const filepath = "data.json";
+  const data = {
+    id: 3,
+    name: "Shaktiman",
+    age: 70,
+  };
+  const newData = JSON.stringify(data);
+  fs.writeFileSync(filepath, data); // overwrite
+};
+module.exports = { readFile, writeFile };
